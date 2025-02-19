@@ -1,9 +1,9 @@
-import domain.Member;
+package com.example.Lee;
+
+import com.example.Lee.domain.Member;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
-import repository.JdbcTemplateMemberRepository;
-import repository.MemberRepository;
+import com.example.Lee.repository.MemberRepository;
 
 public class MemberApp {
     public static void main(String[] args) {

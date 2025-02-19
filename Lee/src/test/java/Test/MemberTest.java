@@ -1,15 +1,15 @@
 package Test;
 
-import domain.Member;
+import com.example.Lee.SpringConfig;
+import com.example.Lee.domain.Member;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import repository.JdbcTemplateMemberRepository;
-import repository.MemberRepository;
+import com.example.Lee.repository.JdbcTemplateMemberRepository;
+import com.example.Lee.repository.MemberRepository;
 
 import javax.sql.DataSource;
 
@@ -17,7 +17,7 @@ public class MemberTest {
 
     @Test
     void saveTest() {
-        ApplicationContext ac = new AnnotationConfigApplicationContext(TestSpringConfig.class);
+        ApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
         MemberRepository memberRepository = ac.getBean(MemberRepository.class);
 
         Member member = new Member();

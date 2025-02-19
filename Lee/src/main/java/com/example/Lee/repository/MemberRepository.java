@@ -1,7 +1,7 @@
-package repository;
+package com.example.Lee.repository;
 
 
-import domain.Member;
+import com.example.Lee.domain.Member;
 
 import java.util.List;
 import java.util.Optional;

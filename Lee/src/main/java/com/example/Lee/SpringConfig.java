@@ -1,9 +1,10 @@
-import org.springframework.beans.factory.annotation.Autowired;
+package com.example.Lee;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import repository.JdbcTemplateMemberRepository;
-import repository.MemberRepository;
+import com.example.Lee.repository.JdbcTemplateMemberRepository;
+import com.example.Lee.repository.MemberRepository;
 
 import javax.sql.DataSource;
 
@@ -23,7 +24,7 @@ public class SpringConfig {
 //    private final DataSource dataSource;
 //
 //    @Autowired
-//    public SpringConfig(DataSource dataSource) {
+//    public com.example.Lee.SpringConfig(DataSource dataSource) {
 //        this.dataSource = dataSource;
 //    }
 

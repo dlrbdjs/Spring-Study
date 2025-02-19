@@ -1,4 +1,4 @@
-package domain;
+package com.example.Lee.domain;
 
 public class Member {
     private Long id;
