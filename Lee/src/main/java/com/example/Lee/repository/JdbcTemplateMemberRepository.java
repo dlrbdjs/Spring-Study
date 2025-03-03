@@ -1,6 +1,6 @@
-package repository;
+package com.example.Lee.repository;
 
-import domain.Member;
+import com.example.Lee.domain.Member;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
