@@ -3,5 +3,5 @@ package practice.demo.member.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import practice.demo.member.entity.MemberEntity;
 
-public interface MemberRepository extends JpaRepository<MemberEntity, Long> {
+public interface MemberRepository extends JpaRepository<MemberEntity, Long> { // <어떤 엔티티 클래스, PK 타입>
 }
