@@ -1,5 +1,6 @@
 package practice.demo.member.controller;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,11 @@ public class MemberController {
         return "save";
     }
 
+    @GetMapping("/member/login")
+    public String loginForm() {
+        return "login";
+    }
+
 //    @PostMapping("/member/save")
 //    public String save(@RequestParam("memberEmail") String memberEmail,
 //                       @RequestParam("memberPassword") String memberPassword,
@@ -35,6 +41,19 @@ public class MemberController {
         System.out.println("MemberController.save");
         System.out.println("memberDTO = " + memberDTO);
         memberService.save(memberDTO);
-        return "index";
+        return "login";
+    }
+
+    @PostMapping("/member/login")
+    public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session) {
+        MemberDTO loginResult = memberService.login(memberDTO);
+        if (loginResult != null) {
+            //login 성공
+            session.setAttribute("loginEmail", loginResult.getMemberEmail()); // 이메일 정보를 세션에 담아줌
+            return "main";
+        } else {
+            //login 실패
+            return "login";
+        }
     }
 }
